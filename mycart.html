@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="mycart.css">
 </head>
 <body>
-<div>
+  <div>
     <div id="header-tops_ad">
         <a href="" style="display:block">
             <img class="desktop_ad"src="	https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg"alt="Beauty Bebo offers"/>
@@ -25,10 +24,11 @@
               <input type="search" name="" placeholder="Enter search..." id="search-box" ><a  href="#" class="fa fa-search"></a>
           </form>
       
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="login.html" class="fas fa-user"></a>
-            </div>
+          <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="login.html" class="fas fa-user"></a>
+              
+          </div>
       </div>
    
     <div id="nav-bottom">
@@ -102,74 +102,123 @@
             
         </div>
     </div>
-    </header>
-
-
-
-    
+  
     <div class="image-slider">
       <img id="aaa" src="https://www.beautybebo.com/pub/media/ads/home-slider/Ponds_Forent_Banner_6-min.jpg" name="image" />
     </div>
-    <div id="product-container"></div>
+  </header>
+  </div>
+  <div id="checkdiv" ></div>
 
-    <!-- footer session -->
-
-    
-    <footer>
-        <div class="main-content">
-            <div class="left box">
-                <h2>About us</h2>
-                <div class="content">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit<br> quod deleniti aut ad perspiciatis, repudiandae <br>culpa ex neque. Modi temporibus ipsam, dolor at <br>excepturi quasi ducimus! Cupiditate fugit recusandae dolor.</p>
-                    <div class="social">
-                        <a href="#"><span class="fab fa-facebook-f"></span></a>
-                        <a href="#"><span class="fab fa-twitter"></span></a>
-                        <a href="#"><span class="fab fa-instagram"></span></a>
-                        <a href="#"><span class="fab fa-youtube"></span></a>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="center box">
-                <h2>Adress</h2>
-                <div class="content">
-                    <div class="place">
-                        <span class="fas fa-map-marker-alt"></span>
-                        <span class="text">Haiderabad ,Surkhet<span class="sign"></span>
-                    </div>
-                    <div class="phone">
-                        <span class="fas fa-phone-alt"></span>
-                        <span class="text">+743849373<span class="sign"></span>
-                    </div>
-                    <div class="place">
-                         <span class="fas fa-envelope"></span>
-                        <span class="text">@beauytobebo.com<span class="sign"></span> 
-                    </div>
-                </div>
-            </div>
-            <div class="right box">
-                <h2>contact us</h2>
-                <div class="content">
-                    <form action="#">
-                        <div class="email">
-                            <div class="text">Email *</div>
-                            <input type="email" required>
-                        </div>
-                        <div class="msg">
-                            <div class="text">Message *</div>
-                            <textarea rows="2" cols="25"required></textarea>
-                        </div>
-                        <div class="footerbtn">
-                            <button type="submit">Send</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </footer>
-   
-    
-</div>
+  <!-- mycart session -->
+    <h1 class="total"></h1>
+    <div id="product-container">
+      <!-- append Product here -->
+    </div>
 </body>
-<script src="index.js"></script>
 </html>
+<script>
+
+var image = document.getElementById("aaa");
+var img_array=["https://www.beautybebo.com/pub/media/ads/home-slider/Slider_banner_1-min.jpg","https://www.beautybebo.com/pub/media/ads/home-slider/Ponds_Forent_Banner_6-min.jpg","https://www.beautybebo.com/pub/media/ads/home-slider/Ponds_Forent_Banner_6-min.jpg"];
+var index=0;
+function slide()
+{
+
+    document["aaa"].src = img_array[index];
+    index++;
+    if(index>=img_array.length)
+    {
+    index=0;
+    }
+}
+setInterval("slide()",3000);
+
+
+
+
+
+let fav=document.getElementById("product-container");
+    let favData=JSON.parse(localStorage.getItem("favourites")) || []
+    console.log(favData)
+    display(favData)
+
+
+let total=document.getElementById("total")
+let plus=JSON.parse(localStorage.getItem("favourites"))
+total=plus
+
+
+
+
+function display(favdata){
+   
+  fav.innerHTML=null
+
+    favdata.forEach((element,index)=>{
+
+      let productcontainer=document.createElement("div")
+      productcontainer.setAttribute("id","productcontainer")
+      let image=document.createElement("img")
+      image.setAttribute("src",element.img)
+
+      let name=document.createElement("p")
+      name.innerText=element.name
+
+      let rating=document.createElement("p")
+      rating.setAttribute("class","fa fa-star checked")
+      rating.innerHTML=element.rating;
+
+      let price=document.createElement("p");
+      price.style.color="#aa047e"
+      price.innerText="₹"+element.price;
+
+      let Checkout=document.createElement("button");
+      Checkout.innerText="Checkout"
+
+      Checkout.addEventListener("click",()=>{
+        let checkdiv=document.getElementById("checkdiv")
+
+        let firstname=document.createElement("p");
+        let namelable=document.createElement("lable");
+
+        let lasttname=document.createElement("p");
+        let lastlable=document.createElement("lable");
+        
+        let emailaddress=document.createElement("p");
+        let emaillable=document.createElement("lable");
+        checkdiv.append(firstname,namelable,lastlable,emailaddress,emaillable)
+
+      })
+
+      
+
+      let Remove=document.createElement("button")
+      Remove.innerText="Remove"
+      Remove.addEventListener("click", function () {
+          let deleted = favData.filter(function (el, i) {
+            if (i === index) {
+              return false;
+            } else {
+              return true;
+            }
+          });
+          alert("Are You Sure you want Remove from Cart")
+          favData = deleted;
+          display(favData)
+        });
+
+
+      productcontainer.append(image,name,rating,price,Checkout,Remove)
+      fav.append(productcontainer)
+
+      
+    })
+  }
+
+display(favData)
+
+//console.log(fav)
+
+
+</script>

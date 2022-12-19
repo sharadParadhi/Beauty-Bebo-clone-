@@ -201,7 +201,7 @@ padding:10px;
   margin-top:10px;
   margin-bottom: 20px;
   padding:10px;
-  background-color:  #aa047e;
+  background-color: #aa047e;
   color: #f1f1f1;
   transition: .3s;
   border: 0px;
@@ -229,71 +229,3 @@ padding:10px;
 color: yellow;
 }
 
-
-          /* footer session */
-
-        footer{
-          margin-top: 20px;
-            bottom:0px;
-            width:100%;
-            background: #1a1a1a;
-            font-size: 16px;
-            color: #fff;
-        }
-        .main-content{
-            display: flex;
-            justify-content: space-evenly;
-
-            
-        }
-        .main-content .box{
-        
-            flex-basis:50%;
-            padding:10px 20px;
-        
-        }
-        .box h2{
-          margin-top: 20px;
-        font-size: 18px;
-        font-weight:600;
-        text-transform: uppercase;
-        }
-        .box .content{
-            margin:20px 0px 0px 0px;
-        }
-        .left .content .social{
-            margin: 20px 0 0 0;
-        }
-        .left .content .social a{
-            padding:0 2px;
-        }
-        .left .content .social a span{
-            height: 40px;
-            width:40px;
-            background: #1a1a1a;
-            line-height: 40px;
-            text-align:center;
-            font-size:18px;
-            border-radius: 5px;
-            transition: .3s;
-        }
-        .left .content .social a span:hover{
-            background: #f12020;
-        }
-        .sign{
-            margin: 3px;
-        }
-        .footerbtn button{
-          width:80px;
-          height: 25px;
-          padding:7px 5px 7px 5px;
-          background-color: red;
-          border-radius: 5px;
-          border: 0px;
-         
-        }
-        
-        .footerbtn button:hover{
-
-          background-color: green;
-        }

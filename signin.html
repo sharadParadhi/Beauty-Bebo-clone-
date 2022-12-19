@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 #id01{
             margin: auto;
+            margin-top: 80px;
             width: fit-content;
-            height: 50px;
+           text-align: center;
+           box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
         }
 
 /* Full-width input fields */
@@ -35,8 +38,9 @@ button {
   background-color: #04AA6D;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 8px 10px;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
@@ -50,12 +54,13 @@ button:hover {
 .cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
+  margin-right: 110px;
 }
 
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
   float: left;
-  width: 50%;
+  width: 40%;
 }
 
 /* Add padding to container elements */
@@ -79,6 +84,8 @@ hr {
   font-size: 40px;
   font-weight: bold;
   color: #f1f1f1;
+  border-radius: 8px;
+  
 }
 
 .close:hover,
@@ -96,6 +103,108 @@ hr {
     </style>
 </head>
 <body>
+
+      <!-- Header session start -->
+
+
+      <div id="header-tops_ad">
+        <a href="" style="display:block">
+            <img class="desktop_ad"src="	https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg"alt="Beauty Bebo offers"/>
+            <img class="mobile_ad"src="	https://www.beautybebo.com/pub/media/ads/ad-mobile.jpg"alt="Beauty Bebo offer" style="display:none;"/>
+        </a>
+        
+    </div>
+    <header class="header">
+      <div class="header-1">
+          <a href="#" class="logo"><img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="BeautyBebo" alt=""/></a>
+          <form action="" class="search-form">
+              <input type="search" name="" placeholder="Enter search..." id="search-box" ><a  href="#" class="fa fa-search"></a>
+          </form>
+      
+          <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="login.html" class="fas fa-user"></a>
+              
+          </div>
+      </div>
+    
+    <div id="nav-bottom">
+        <div class="left-tag">
+            <div class="dropdown">
+                <button class="dropbtn">HOME</button>
+                <div class="dropdown-content">
+                  
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">MAKEUP</button>
+                <div class="dropdown-content">
+                    <a href="#">Blush</a>
+                    <a href="#">Bronzer</a>
+                    <a href="#">Face Primer</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">SKIN</button>
+                <div class="dropdown-content">
+                    <a href="#">Dark Circles</a>
+                    <a href="#">Eye Cream</a>
+                    <a href="#">Eye Contour Cantarell</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">HAIR</button>
+                <div class="dropdown-content">
+                    <a href="#">Color Protection</a>
+                    <a href="#">Hair Spray</a>
+                    <a href="#">Dry Shmappo</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">FRAGRANCE</button>
+                <div class="dropdown-content">
+                    <a href="#">Perfumes</a>
+                    <a href="#">Deidirants role ons</a>
+                    <a href="#">Body Mist/Spray</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><span>MOM & BABY<i class="arrow up"></i></span></button>
+                <div class="dropdown-content">
+                    <a href="#">Bath time</a>
+                    <a href="#">Oils</a>
+                    <a href="#">Powder</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AAYURVEDA</button>
+                <div class="dropdown-content">
+                    <a href="#">Body Lotion</a>
+                    <a href="#">Cream</a>
+                    <a href="#">Gel</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">BRANDS</button>
+                <div class="dropdown-content">
+                    <a href="#">LAKME</a>
+                    <a href="#">JOY</a>
+                    <a href="#">AROMA MAGIC</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <a href="mycart.html"> <button class="dropbtn">MYCART<span class="total"></span></button></a>
+            
+        </div>
+    </div>
+    </header>
+
+       <!-- Header session end -->
+
+        <!-- Sign Up session -->
+
     <div id="id01" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
         <form class="modal-content" action="/action_page.php">
@@ -103,14 +212,14 @@ hr {
             <h1>Sign Up</h1>
             <p>Please fill in this form to create an account.</p>
             <hr>
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <label  for="email"><b>Email</b></label>
+            <input id="email"  type="text" placeholder="Enter Email" name="email" required>
       
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input id="password" type="password" placeholder="Enter Password" name="psw" required>
       
             <label for="psw-repeat"><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            <input id="repeat_password" type="password" placeholder="Repeat Password" name="psw-repeat" required>
             
             <label>
               <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -120,11 +229,95 @@ hr {
       
             <div class="clearfix">
               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-              <button type="submit" class="signupbtn">Sign Up</button>
+              <button id="signupbtn" type="submit" class="signupbtn" onclick="signup()" >Sign Up</button>
             </div>
           </div>
         </form>
       </div>
       
+      <!-- footer session -->
+      <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>About us</h2>
+                <div class="content">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit<br> quod deleniti aut ad perspiciatis, repudiandae <br>culpa ex neque. Modi temporibus ipsam, dolor at <br>excepturi quasi ducimus! Cupiditate fugit recusandae dolor.</p>
+                    <div class="social">
+                        <a href="#"><span class="fab fa-facebook-f"></span></a>
+                        <a href="#"><span class="fab fa-twitter"></span></a>
+                        <a href="#"><span class="fab fa-instagram"></span></a>
+                        <a href="#"><span class="fab fa-youtube"></span></a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="center box">
+                <h2>Adress</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">Haiderabad ,Surkhet<span class="sign"></span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+743849373<span class="sign"></span>
+                    </div>
+                    <div class="place">
+                         <span class="fas fa-envelope"></span>
+                        <span class="text">@beauytobebo.com<span class="sign"></span> 
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2>contact us</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text">Message *</div>
+                            <textarea rows="2" cols="25"required></textarea>
+                        </div>
+                        <div class="footerbtn">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
 </body>
 </html>
+
+<script>
+
+
+
+function signup(e){
+  event.preventDefault();
+  var email=document.getElementById("email").value
+  var pass=document.getElementById("password").value;
+  var rep_pass=document.getElementById("repeat_password").value;
+
+  
+  var user={
+    email:email,
+    password:pass
+  
+}
+
+var json=JSON.stringify(user);
+localStorage.setItem("data",json)
+
+
+  alert("SigninS Successfully")
+  location.replace("http://127.0.0.1:5500/login.html")
+
+
+}
+
+
+</script>
