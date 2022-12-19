@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #id01{
+            margin: auto;
+            margin-top: 100px;
+            width: 60%;
+           padding:5px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+        }
+        input[type=text], input[type=password] {
+  width:100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+        button {
+  background-color: #d817ae;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+  background-color: green;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+    </style>
+</head>
+<body>
+
+     <!-- Header session -->
+
+  <div id="header-tops_ad">
+    <a href="" style="display:block">
+        <img class="desktop_ad"src="	https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg"alt="Beauty Bebo offers"/>
+        <img class="mobile_ad"src="	https://www.beautybebo.com/pub/media/ads/ad-mobile.jpg"alt="Beauty Bebo offer" style="display:none;"/>
+    </a>
+    
+</div>
+<header class="header">
+  <div class="header-1">
+      <a href="#" class="logo"><img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="BeautyBebo" alt=""/></a>
+      <form action="" class="search-form">
+          <input type="search" name="" placeholder="Enter search..." id="search-box" ><a  href="#" class="fa fa-search"></a>
+      </form>
+  
+      <div class="icons">
+          <a href="#" class="fas fa-heart"></a>
+          <a href="login.html" class="fas fa-user"></a>
+          
+      </div>
+  </div>
+
+<div id="nav-bottom">
+    <div class="left-tag">
+        <div class="dropdown">
+            <button class="dropbtn">HOME</button>
+            <div class="dropdown-content">
+              
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">MAKEUP</button>
+            <div class="dropdown-content">
+                <a href="#">Blush</a>
+                <a href="#">Bronzer</a>
+                <a href="#">Face Primer</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">SKIN</button>
+            <div class="dropdown-content">
+                <a href="#">Dark Circles</a>
+                <a href="#">Eye Cream</a>
+                <a href="#">Eye Contour Cantarell</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">HAIR</button>
+            <div class="dropdown-content">
+                <a href="#">Color Protection</a>
+                <a href="#">Hair Spray</a>
+                <a href="#">Dry Shmappo</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">FRAGRANCE</button>
+            <div class="dropdown-content">
+                <a href="#">Perfumes</a>
+                <a href="#">Deidirants role ons</a>
+                <a href="#">Body Mist/Spray</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><span>MOM & BABY<i class="arrow up"></i></span></button>
+            <div class="dropdown-content">
+                <a href="#">Bath time</a>
+                <a href="#">Oils</a>
+                <a href="#">Powder</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">AAYURVEDA</button>
+            <div class="dropdown-content">
+                <a href="#">Body Lotion</a>
+                <a href="#">Cream</a>
+                <a href="#">Gel</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">BRANDS</button>
+            <div class="dropdown-content">
+                <a href="#">LAKME</a>
+                <a href="#">JOY</a>
+                <a href="#">AROMA MAGIC</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="mycart.html"> <button class="dropbtn">MYCART<span class="total"></span></button></a>
+        
+    </div>
+</div>
+</header>
+      <!-- Header session  end -->
+
+      <!-- Login session -->
+
+    <div id="id01" class="modal">
+      <h2 style="text-align: center;">Login Here!</h2>
+  
+        <form class="modal-content animate" action="" method="post">
+        
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" id="email" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit" onclick="login()">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span><span>Did't have account <a href="signin.html">click here</a></span>
+          </div>
+        </form>
+      </div>
+
+        <!-- footer session -->
+
+        <footer>
+          <div class="main-content">
+              <div class="left box">
+                  <h2>About us</h2>
+                  <div class="content">
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit<br> quod deleniti aut ad perspiciatis, repudiandae <br>culpa ex neque. Modi temporibus ipsam, dolor at <br>excepturi quasi ducimus! Cupiditate fugit recusandae dolor.</p>
+                      <div class="social">
+                          <a href="#"><span class="fab fa-facebook-f"></span></a>
+                          <a href="#"><span class="fab fa-twitter"></span></a>
+                          <a href="#"><span class="fab fa-instagram"></span></a>
+                          <a href="#"><span class="fab fa-youtube"></span></a>
+                          
+                      </div>
+                  </div>
+              </div>
+              <div class="center box">
+                  <h2>Adress</h2>
+                  <div class="content">
+                      <div class="place">
+                          <span class="fas fa-map-marker-alt"></span>
+                          <span class="text">Haiderabad ,Surkhet<span class="sign"></span>
+                      </div>
+                      <div class="phone">
+                          <span class="fas fa-phone-alt"></span>
+                          <span class="text">+743849373<span class="sign"></span>
+                      </div>
+                      <div class="place">
+                           <span class="fas fa-envelope"></span>
+                          <span class="text">@beauytobebo.com<span class="sign"></span> 
+                      </div>
+                  </div>
+              </div>
+              <div class="right box">
+                  <h2>contact us</h2>
+                  <div class="content">
+                      <form action="#">
+                          <div class="email">
+                              <div class="text">Email *</div>
+                              <input type="email" required>
+                          </div>
+                          <div class="msg">
+                              <div class="text">Message *</div>
+                              <textarea rows="2" cols="25"required></textarea>
+                          </div>
+                          <div class="footerbtn">
+                              <button type="submit">Send</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </footer>
+     
+</body>
+</html>
+<script>
+
+function login(e){
+  e.preventDefault();
+  var email=document.getElementById("email").value
+  var pass=document.getElementById("password").value;
+  
+
+
+  var userdata=localStorage.getItem("data")
+  var mydata=JSON.parse(userdata);
+  console.log(mydata)
+  
+
+if(userdata==null){
+  alert("Wrong email")
+} else if(email==mydata.email && pass==mydata.password){
+ 
+    alert("login Successfully")
+  location.replace("http://127.0.0.1:5500/index.html")
+
+}else{
+  alert("Wrong password")
+}
+}
+
+
+</script>

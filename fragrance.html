@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    padding:0px;
+    margin:0px;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    margin: auto;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#header-tops_ad{
+    display: inline-block;
+    position: relative;
+    display: flex;
+}
+#nav-mid{
+    display:flex;
+    margin:auto;
+    justify-content: space-around;
+}
+.mid-left{
+    display: flex;
+    justify-content: space-around;
+}
+.mid-right{
+    display: flex;
+}
+.search_box{
+    margin-left: 20px;
+    margin-top:30px;
+    width:60px;
+    height: 30px;
+}
+.header-whishlist img{
+    height: 50px;
+    width:50px;
+    margin-top: 20px;
+}
+.login-Unactive img{
+    height: 88px;
+    width:88px;
+}
+#nav-bottom{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    background-color: #aa047e;
+}
+.left-tag{
+    padding-left: 50px;
+}
+.dropbtn {
+    background-color: #aa047e;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  #home{
+  display: flex;
+    margin:auto;
+    border: 1px solid red;
+  }
+  .home-left{
+    margin:auto;
+    width:fit-content;
+    border: 1px solid red
+  }
+  .home-right{
+   margin:auto;
+   width:fit-content;
+    border: 1px solid red
+  }
+  .sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #241f1f;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+        
+    </style>
+</head>
+<body>
+<div>
+    <div id="header-tops_ad">
+        <a href="" style="display:block">
+            <img class="desktop_ad"src="	https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg"alt="Beauty Bebo offers"/>
+            <img class="mobile_ad"src="	https://www.beautybebo.com/pub/media/ads/ad-mobile.jpg"alt="Beauty Bebo offer" style="display:none;"/>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.cosmatic.beauty.beautybebo" style="display:block" class="download_app_link" id="app_doenload_link" style="display: block;">
+        <img src="	https://www.beautybebo.com/pub/media/bb-app.png" alt=""/></a>
+    </div>
+    <div id="nav-mid">
+        <div class="mid-left">
+                <div class="logo">
+                <a class="logo" href="https://www.beautybebo.com/" title="BeautyBebo">
+                    <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="BeautyBebo" width="300" height="64"></a>
+                </div>
+                <div class="search_box">
+                <input id="serach_text" type="text" placeholder="Enter your search" width="160" height="60">
+                <div id="action"><i class="bi bi-search"></i></div>
+                </div>
+        </div>
+
+        <div class="mid-right">
+            <div class="header-whishlist">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/add-favorite-1803634-1530848.png" alt=""/>
+                    </a>
+            </div>
+            <div class="login-Unactive">
+                <a class="navbar-brand" href="#">
+                        <img src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg" alt="" width="30" height="24">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="nav-bottom">
+        <div class="left-tag">
+            <div class="dropdown">
+                <button class="dropbtn">MAKEUP</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">SKIN</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">HAIR</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">FRAGRANCE</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">MYCART</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </div>
+    <div id="home">
+            <div class="home-right">
+            <img src="https://www.beautybebo.com/pub/media/ads/home-slider/Slider_banner_1-min.jpg"alt=""/>
+        </div>
+    </div>
+    <div id="product-container"></div>
+
+    
+</div>
+</body>
+<script src="fragrance.js"></script>
+</html>
